@@ -3,6 +3,13 @@ import { AddIcon, DeleteIcon } from "@chakra-ui/icons";
 import { Box, Input, IconButton, Heading } from "@chakra-ui/react";
 
 export const InputItems = ({ newTodo, handleInputChange, handleAddTodo }) => {
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Evita que el formulario se envíe
+      handleAddTodo();
+    }
+  };
+
   return (
     <Box display={"flex"} gap={"5px"} justifyContent={"center"}>
       <Input
@@ -12,6 +19,7 @@ export const InputItems = ({ newTodo, handleInputChange, handleAddTodo }) => {
         width={"500px"}
         value={newTodo}
         onChange={handleInputChange}
+        onKeyDown={handleKeyDown} // Funcion para teclas, que al dar Enter se agregue la Tarea
       />
       <IconButton
         onClick={handleAddTodo}
