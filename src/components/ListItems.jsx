@@ -8,7 +8,8 @@ export const ListItems = ({ todos, handleDeleteTodo }) => {
     <Box
       width={["80%", "50%", "50%"]}
       height={["60%", "50%", "70%"]}
-      backgroundColor={"white"}
+      className="bgItems"
+      // backgroundColor={"white"}
       rounded={"md"}
       shadow={"md"}
       display={"flex"}
@@ -22,6 +23,7 @@ export const ListItems = ({ todos, handleDeleteTodo }) => {
           <li key={todo.id}>
             <span>{todo.text}</span>
             <IconButton
+              rounded={"50px"}
               marginLeft={"10px"}
               size={"sm"}
               onClick={() => handleDeleteTodo(todo.id)}

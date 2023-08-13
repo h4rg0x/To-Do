@@ -20,6 +20,7 @@ import Swal from "sweetalert2"; //Importando un sistema de alerta
 import { ListItems } from "./ListItems";
 import { InputItems } from "./InputItems";
 import { Title } from "./Title";
+
 export const ToDoList = () => {
   // const [todos, setTodos] = useState([]);
 
@@ -62,9 +63,9 @@ export const ToDoList = () => {
   };
   return (
     <Box
+      className="bgcontainer"
       display={"flex"}
       flexDirection={"column"}
-      backgroundColor={"purple"}
       height={"100vh"}
       justifyContent={"center"}
       alignItems={"center"}

@@ -13,6 +13,8 @@ export const InputItems = ({ newTodo, handleInputChange, handleAddTodo }) => {
   return (
     <Box display={"flex"} gap={"5px"} justifyContent={"center"}>
       <Input
+        variant={"outline"}
+        rounded={"50px"}
         borderColor={"white"}
         placeholder={"Enter Your Things To Do"}
         color={"white"}
@@ -22,6 +24,7 @@ export const InputItems = ({ newTodo, handleInputChange, handleAddTodo }) => {
         onKeyDown={handleKeyDown} // Funcion para teclas, que al dar Enter se agregue la Tarea
       />
       <IconButton
+        rounded={"50px"}
         onClick={handleAddTodo}
         backgroundColor={"white"}
         aria-label="Search database"
